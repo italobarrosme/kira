@@ -5,7 +5,6 @@ export function Index() {
 
   return (
     <>
-    
     <aside className="w-full p-6 sm:w-60 dark:bg-gray-900 dark:text-gray-100">
     <nav className="space-y-8 text-sm">
       <div className="space-y-2">
