@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js" defer crossOrigin='anonymous'></script>
+          <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer crossOrigin='anonymous'></script>
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
