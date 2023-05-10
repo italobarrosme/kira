@@ -3,7 +3,7 @@ import { Component } from './type'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 
-const XpLayout = ({ children, title }: Component) => {
+export const XpLayout = ({ children, title }: Component) => {
   return (
     <>
       <Head>
@@ -12,8 +12,8 @@ const XpLayout = ({ children, title }: Component) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen justify-center w-full items-center px-4">
-        <Link  href="/" className='flex items-center p-2'>
-          <Icon icon="twemoji:backhand-index-pointing-left" width={24}/>
+        <Link href="/" className="flex items-center p-2">
+          <Icon icon="twemoji:backhand-index-pointing-left" width={24} />
           <span className="p-2 text-2xl font-bold text-secondary-500">
             Voltar
           </span>
@@ -23,5 +23,3 @@ const XpLayout = ({ children, title }: Component) => {
     </>
   )
 }
-
-export default XpLayout

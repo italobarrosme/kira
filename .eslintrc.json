@@ -1,5 +1,15 @@
 {
   "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
   "ignorePatterns": ["**/*"],
   "plugins": ["@nx"],
   "overrides": [

@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import { InputText } from '@kira/ui';
 import {useState, useRef, ChangeEvent, useEffect, RefObject} from 'react';
-import XpLayout from '../../layouts/XpLayout';
+import { XpLayout} from '../../layouts/';
 
 const Qrcode = () => {
 
