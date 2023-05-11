@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react'
 import { XpLayout } from '../../layouts'
 import { Button } from '@kira/ui'
 import { useEffect, useState } from 'react'
@@ -30,17 +29,12 @@ const Cronus = () => {
   }
 
   useEffect(() => {
-    console.log('isPausePlaying', isPausePlaying)
-    console.log('isPlaying', isPlaying)
     if (!isPlaying && isPausePlaying) {
-      console.log('veio aqui?')
       playTimer()
     }
   }, [isPausePlaying, isPlaying])
 
   const resetTimer = () => {
-    console.log('reset')
-
     setIsPlaying(false)
     setIsPausePlaying(false)
     clearInterval(intervalId)
