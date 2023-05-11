@@ -11,12 +11,10 @@ export const XpLayout = ({ children, title }: Component) => {
         <meta name="description" content={title} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-screen justify-center w-full items-center px-4">
+      <main className="h-screen justify-center w-full items-center px-4 text-secondary-500">
         <Link href="/" className="flex items-center p-2">
           <Icon icon="twemoji:backhand-index-pointing-left" width={24} />
-          <span className="p-2 text-2xl font-bold text-secondary-500">
-            Voltar
-          </span>
+          <span className="p-2 text-2xl font-bold ">Voltar</span>
         </Link>
         {children}
       </main>
