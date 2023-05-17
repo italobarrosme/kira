@@ -16,7 +16,7 @@ const Cronus = () => {
   const playTimer = () => {
     setIsInitState(false)
     const interval = setInterval(() => {
-      setClock((prev) => prev.add(1, 'millisecond'))
+      setClock((prev) => prev.add(5, 'millisecond'))
     }, 1)
 
     setIntervalId(interval)
@@ -54,7 +54,7 @@ const Cronus = () => {
           </span>
         </div>
 
-        <div className="flex gap-4 justify-center items-center">
+        <div className="flex flex-wrap gap-4 justify-center items-center">
           <Button
             label="Iniciar"
             icon="mdi:timer-play"

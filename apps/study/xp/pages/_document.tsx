@@ -31,11 +31,28 @@ class MyDocument extends Document {
             defer
             crossOrigin="anonymous"
           ></script>
-          <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"
+            defer
+            crossOrigin="anonymous"
+          ></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"
+            defer
+            crossOrigin="anonymous"
+          ></script>
           <script>dayjs.extend(window.dayjs_plugin_utc)</script>
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap"
+            rel="stylesheet"
+          />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"

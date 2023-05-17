@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@kira/ui": ["libs/ui/src/index.ts"]
+      "@kira/ui": ["libs/ui/src/index.ts"],
+      "@kira/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

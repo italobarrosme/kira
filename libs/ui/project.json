@@ -29,11 +29,17 @@
       }
     },
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/ui"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/libs/ui"
+        "jestConfig": "libs/ui/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     }
   }

@@ -10,8 +10,8 @@
       }
     },
     "no-cloud": {
-    "runner": "@nrwl/workspace/src/tasks-runner/default-tasks-runner",
-    "options": {}
+      "runner": "@nrwl/workspace/src/tasks-runner/default-tasks-runner",
+      "options": {}
     }
   },
   "targetDefaults": {
@@ -42,7 +42,7 @@
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/jest.config.[jt]s"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   },
   "generators": {
     "@nx/react": {

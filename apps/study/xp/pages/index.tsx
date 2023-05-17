@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function Index() {
   return (
     <>
-      <aside className="w-full py-4 sm:w-60 bg-secondary-100 text-primary-200 h-screen">
+      <aside className="w-full py-4 sm:w-60 bg-secondary-100 text-primary-200 h-screen dark">
         <nav className="text-sm">
           <div className="flex flex-col gap-4 w-full">
             <h2 className="px-4 text-2xl font-semibold tracking-widest uppercase text-primary-200">
@@ -30,6 +30,13 @@ export function Index() {
                 className="p-4 flex items-center justify-between hover:bg-primary-300 hover:text-secondary-100"
               >
                 003 - Cronus
+                <Icon width={24} icon="material-symbols:arrow-circle-right" />
+              </Link>
+              <Link
+                href="/004-weather-app"
+                className="p-4 flex items-center justify-between hover:bg-primary-300 hover:text-secondary-100"
+              >
+                004 - Weather App
                 <Icon width={24} icon="material-symbols:arrow-circle-right" />
               </Link>
             </div>
