@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getWeather } from './'
+import { getWeather } from '..'
 
 export type Weather = {
   humidity: number
@@ -22,6 +22,7 @@ export const useVerifyWeatherData = (city: string) => {
             temperature: Math.round(data.main.temp - 273.15), // Convert from Kelvin to Celsius,
             type: data.weather[0].main
           }
+          // remove data alter
           setWeather(weather)
           setError(undefined)
         })
