@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react'
+import { clsx } from 'clsx'
 import { ButtonHTMLAttributes } from 'react'
 
 export type ButtonProps = {
@@ -11,11 +12,15 @@ export const Button = ({
   icon = 'fluent-emoji-flat:bug',
   label,
   onClick,
+  className,
   ...props
 }: ButtonProps) => {
   return (
     <button
-      className="disabled:bg-secondary-300 disabled:text-secondary-100 bg-primary-300 border-2 border-transparent text-white font-bold py-2 px-4 rounded flex gap-4 hover:bg-primary-100 hover:text-secondary-100 hover:border-2 hover:border-secondary-100"
+      className={clsx(
+        className,
+        'disabled:bg-secondary-300 w-full disabled:text-secondary-100 bg-primary-300 border-2 justify-center border-transparent text-white font-bold py-2 px-4 rounded flex gap-4 hover:bg-primary-100 hover:text-secondary-100 hover:border-2 hover:border-secondary-100'
+      )}
       onClick={onClick}
       {...props}
     >

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from 'framer-motion'
 import { useEffect, useState, useRef } from 'react'
@@ -23,8 +24,11 @@ export const GridCards = ({ cards }: GridCardsProps) => {
     const newPositions: { [key: string]: { x: number; y: number } } = {}
 
     cubes.forEach((cube) => {
-      const randomX = Math.random() * (window.innerWidth - 700)
-      const randomY = Math.random() * (window.innerHeight - 700)
+      const randomX = Math.random() * (window.innerWidth - 600)
+      const randomY = Math.random() * (window.innerHeight - 500)
+
+      console.log(randomX, randomY, 'positions')
+      console.log('size screen', window.innerWidth, window.innerHeight)
 
       newPositions[cube.id] = { x: randomX, y: randomY }
     })
@@ -39,7 +43,7 @@ export const GridCards = ({ cards }: GridCardsProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       randomScreen(cards)
-    }, 4000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [])
@@ -50,11 +54,11 @@ export const GridCards = ({ cards }: GridCardsProps) => {
         <motion.a
           key={card.id}
           href={card.link}
-          className="bg-primary-500 rounded-sm h-44 w-44 p-4 cursor-pointer group/card flex justify-center items-center grid-card"
+          className="bg-primary-400 rounded-sm h-32 w-32 p-4 cursor-pointer group/card flex justify-center items-center grid-card"
           animate={positions[card.id]}
           transition={{ duration: 2 }}
         >
-          <span className="group-hover/card:block hidden text-primary-100 text-sm ease-in-out">
+          <span className="group-hover/card:block hidden text-primary-100 text-xs ease-in-out text-center">
             {card.title}
           </span>
         </motion.a>

@@ -11,7 +11,7 @@ export function Index() {
     {
       id: 2,
       title: 'Acerte o número',
-      link: '/002-HitNumber'
+      link: '/002-hitNumber'
     },
     {
       id: 3,
@@ -28,7 +28,10 @@ export function Index() {
   return (
     <>
       <DefaultLayout title="XP">
-        <div className="flex flex-wrap w-full gap-4">
+        <div className="flex justify-center w-full h-screen gap-4 relative">
+          <h1 className="absolute top-[40%]">
+            <span className="text-4xl font-bold">XP - Projects</span>
+          </h1>
           <GridCards cards={apps} />
         </div>
       </DefaultLayout>
