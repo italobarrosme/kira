@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "sx:start": "nx serve study-xp",
+    "sx:dev": "nx serve study-xp",
     "sx:build": "nx build study-xp"
   },
   "private": true,
