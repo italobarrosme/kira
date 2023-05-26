@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from 'framer-motion'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
 type card = {
   id: string | number
@@ -21,19 +21,30 @@ export const GridCards = ({ cards }: GridCardsProps) => {
   }>({})
 
   const randomScreen = (cubes: card[]) => {
-    const newPositions: { [key: string]: { x: number; y: number } } = {}
+    setPositions((prevPositions) => {
+      const newPositions: { [key: string]: { x: number; y: number } } = {}
+      const cubeSize = 128 * cubes.length
 
-    cubes.forEach((cube) => {
-      const randomX = Math.random() * (window.innerWidth - 600)
-      const randomY = Math.random() * (window.innerHeight - 500)
+      cubes.forEach((cube) => {
+        const maxX = window.innerWidth - cubeSize
+        const maxY = window.innerHeight - cubeSize
 
-      console.log(randomX, randomY, 'positions')
-      console.log('size screen', window.innerWidth, window.innerHeight)
+        let randomX = Math.random() * maxX
+        let randomY = Math.random() * maxY
 
-      newPositions[cube.id] = { x: randomX, y: randomY }
+        if (prevPositions[cube.id]) {
+          randomX = Math.min(randomX, maxX - prevPositions[cube.id].x)
+          randomY = Math.min(randomY, maxY - prevPositions[cube.id].y)
+        }
+
+        const finalX = Math.max(randomX, 0)
+        const finalY = Math.max(randomY, 0)
+
+        newPositions[cube.id] = { x: finalX, y: finalY }
+      })
+
+      return { ...prevPositions, ...newPositions }
     })
-
-    setPositions(newPositions)
   }
 
   useEffect(() => {
@@ -58,7 +69,7 @@ export const GridCards = ({ cards }: GridCardsProps) => {
           animate={positions[card.id]}
           transition={{ duration: 2 }}
         >
-          <span className="group-hover/card:block hidden text-primary-100 text-xs ease-in-out text-center">
+          <span className="group-hover/card:block lg:hidden text-primary-100 text-xs ease-in-out text-center">
             {card.title}
           </span>
         </motion.a>

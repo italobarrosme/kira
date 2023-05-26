@@ -28,7 +28,7 @@ export function Index() {
   return (
     <>
       <DefaultLayout title="XP">
-        <div className="flex justify-center w-full h-screen gap-4 relative">
+        <div className="sm:flex w-screen h-screen gap-4">
           <h1 className="absolute top-[40%]">
             <span className="text-4xl font-bold">XP - Projects</span>
           </h1>
