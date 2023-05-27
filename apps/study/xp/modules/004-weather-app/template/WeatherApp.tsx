@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export const WeatherApp = () => {
-  const { search, handleSearch } = useSearch()
+  const { search, handlerSearch } = useSearch()
 
   const { weather, error } = useVerifyWeatherData(search)
 
@@ -41,7 +41,7 @@ export const WeatherApp = () => {
             placeholder="Enter your location"
             id={'input-search'}
             icon=""
-            onChange={(ev) => handleSearch(ev)}
+            onChange={(ev) => handlerSearch(ev)}
           />
         </div>
 
