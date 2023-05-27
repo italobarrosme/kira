@@ -13,6 +13,7 @@ export const InputText = ({
   id,
   placeholder,
   icon = 'twemoji:neutral-face',
+  maxLength = 9999,
   onChange
 }: InputTextProps) => {
   return (
@@ -28,6 +29,7 @@ export const InputText = ({
         <input
           onChange={(ev) => onChange(ev)}
           className="rounded-md focus:outline-none px-2 w-full"
+          maxLength={maxLength}
           type="text"
           id={id}
           placeholder={placeholder}

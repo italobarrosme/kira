@@ -4,7 +4,7 @@ export const useSearch = () => {
   const [search, setSearch] = useState<string>('')
   let timerId: NodeJS.Timeout
 
-  const handleSearch = (ev: ChangeEvent) => {
+  const handlerSearch = (ev: ChangeEvent) => {
     const { value } = ev.target as HTMLInputElement
     clearTimeout(timerId)
 
@@ -13,5 +13,5 @@ export const useSearch = () => {
     }, 700)
   }
 
-  return { search, handleSearch }
+  return { search, handlerSearch }
 }

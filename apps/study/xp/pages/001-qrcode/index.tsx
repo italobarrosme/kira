@@ -1,5 +1,5 @@
 import { XpLayout } from '../../layouts/'
-import { QrcodeApp } from '../../modules/qrcode-app/template'
+import { QrcodeApp } from '../../modules/001-qrcode-app/template'
 
 const Qrcode = () => {
   return (

@@ -1,0 +1,1 @@
+export { useInputText } from './useInputText'

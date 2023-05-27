@@ -28,7 +28,7 @@ export const InputSearch = ({
         <Icon icon={icon} />
         <input
           onChange={(ev) => onChange(ev)}
-          className="rounded-md focus:outline-none px-2 w-full"
+          className="rounded-md focus:outline-none px-2 w-full text-primary-100"
           type="text"
           id={id}
           placeholder={placeholder}

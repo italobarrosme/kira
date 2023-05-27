@@ -1,5 +1,5 @@
 import { XpLayout } from '../../layouts'
-import { CronusApp } from '../../modules/cronus-app'
+import { CronusApp } from '../../modules/003-cronus-app'
 
 export const Cronus = () => {
   return (

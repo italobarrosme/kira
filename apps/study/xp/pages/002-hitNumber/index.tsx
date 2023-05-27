@@ -1,5 +1,5 @@
 import { XpLayout } from '../../layouts/'
-import { HitNumberApp } from '../../modules/hitNumber-app'
+import { HitNumberApp } from '../../modules/002-hitNumber-app'
 
 const HitNumber = () => {
   return (

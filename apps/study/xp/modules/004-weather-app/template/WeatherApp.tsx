@@ -1,7 +1,6 @@
-import { InputSearch } from '@kira/ui'
+import { InputSearch, useSearch } from '@kira/ui'
 import { Icon } from '@iconify/react'
 import { useVerifyWeatherData } from '../hooks/useVerifyWeatherData'
-import { useSearch } from '../hooks/useSearch'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 

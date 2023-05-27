@@ -1,5 +1,5 @@
 import { XpLayout } from '../../layouts'
-import { WeatherApp } from '../../modules/weather-app'
+import { WeatherApp } from '../../modules/004-weather-app'
 
 const Weather = () => {
   return (

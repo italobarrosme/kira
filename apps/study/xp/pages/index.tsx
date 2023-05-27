@@ -21,7 +21,12 @@ export function Index() {
     {
       id: 4,
       title: 'Weather',
-      link: '/004-weather-app'
+      link: '/004-weather'
+    },
+    {
+      id: 5,
+      title: 'Invoice Calculation',
+      link: '/005-invoice-calculation'
     }
   ]
 
