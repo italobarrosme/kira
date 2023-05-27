@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 
 export const InvoiceCalculationApp = () => {
   const [invoice, setInvoice] =
-    useState(`Data da Transacao;Estabelecimento;Tipo da Transacao;Valor
+    useState(` Data da Transacao;Estabelecimento;Tipo da Transacao;Valor
   19/05/2023;Uber   *uber   *trip;;5,63
   19/05/2023;Uber   *uber   *trip;;5,56
   19/05/2023; ;;-5,56

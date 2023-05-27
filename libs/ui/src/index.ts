@@ -1,4 +1,5 @@
 export { InputText, useInputText } from './lib/pieces/InpuText'
+export { InputTextArea, useInputTextArea } from './lib/pieces/InputTextArea'
 export { InputNumber } from './lib/pieces/InputNumber'
 export { InputSearch, useSearch } from './lib/pieces/InputSearch'
 export { Button } from './lib/pieces/Button'

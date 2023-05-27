@@ -2,7 +2,6 @@ import { InputHTMLAttributes, ChangeEvent } from 'react'
 import { Icon } from '@iconify/react'
 
 export type InputTextProps = {
-  id: string
   label: string
   icon?: string
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
@@ -13,8 +12,9 @@ export const InputText = ({
   id,
   placeholder,
   icon = 'twemoji:neutral-face',
-  maxLength = 9999,
-  onChange
+  maxLength = 50,
+  onChange,
+  ...props
 }: InputTextProps) => {
   return (
     <>
@@ -33,6 +33,7 @@ export const InputText = ({
           type="text"
           id={id}
           placeholder={placeholder}
+          {...props}
         />
       </div>
     </>
