@@ -20,27 +20,27 @@ export const GridCards = ({ cards }: GridCardsProps) => {
     [key: string]: { x: number; y: number }
   }>({})
 
-  const randomScreen = (cubes: card[]) => {
+  const randomScreen = (circles: card[]) => {
     setPositions((prevPositions) => {
       const newPositions: { [key: string]: { x: number; y: number } } = {}
-      const cubeSize = 128 * cubes.length
+      const circleSize = 32 * circles.length
 
-      cubes.forEach((cube) => {
-        const maxX = window.innerWidth - cubeSize
-        const maxY = window.innerHeight - cubeSize
+      circles.forEach((circle) => {
+        const maxX = window.innerWidth - circleSize
+        const maxY = window.innerHeight - circleSize
 
         let randomX = Math.random() * maxX
         let randomY = Math.random() * maxY
 
-        if (prevPositions[cube.id]) {
-          randomX = Math.min(randomX, maxX - prevPositions[cube.id].x)
-          randomY = Math.min(randomY, maxY - prevPositions[cube.id].y)
+        if (prevPositions[circle.id]) {
+          randomX = Math.min(randomX, maxX - prevPositions[circle.id].x)
+          randomY = Math.min(randomY, maxY - prevPositions[circle.id].y)
         }
 
         const finalX = Math.max(randomX, 0)
         const finalY = Math.max(randomY, 0)
 
-        newPositions[cube.id] = { x: finalX, y: finalY }
+        newPositions[circle.id] = { x: finalX, y: finalY }
       })
 
       return { ...prevPositions, ...newPositions }
@@ -54,7 +54,7 @@ export const GridCards = ({ cards }: GridCardsProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       randomScreen(cards)
-    }, 3000)
+    }, 6000)
 
     return () => clearInterval(interval)
   }, [])
@@ -65,11 +65,11 @@ export const GridCards = ({ cards }: GridCardsProps) => {
         <motion.a
           key={card.id}
           href={card.link}
-          className="bg-primary-400 rounded-sm h-32 w-32 p-4 cursor-pointer group/card flex justify-center items-center grid-card"
+          className="bg-secondary-400 rounded-full h-2 w-2 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
           animate={positions[card.id]}
           transition={{ duration: 2 }}
         >
-          <span className="group-hover/card:block lg:hidden text-primary-100 text-xs ease-in-out text-center">
+          <span className="group-hover/card:block lg:hidden text-primary-400 text-xs font-bold ease-in-out text-left absolute left-7 w-24">
             {card.title}
           </span>
         </motion.a>

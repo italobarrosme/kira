@@ -1,1 +1,1 @@
-export { useTextArea } from './useInputTextArea'
+export { useInputTextArea } from './useInputTextArea'

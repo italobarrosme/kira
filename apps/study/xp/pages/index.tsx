@@ -32,14 +32,14 @@ export function Index() {
 
   return (
     <>
-      <DefaultLayout title="XP">
-        <div className="sm:flex w-screen h-screen gap-4">
-          <h1 className="absolute top-[40%]">
-            <span className="text-4xl font-bold">XP - Projects</span>
-          </h1>
-          <GridCards cards={apps} />
-        </div>
-      </DefaultLayout>
+      <div className="sm:flex w-screen h-screen gap-4 bg-black p-9">
+        <h1 className="absolute top-[40%]">
+          <span className="text-4xl font-bold text-primary-200">
+            XP - Projects
+          </span>
+        </h1>
+        <GridCards cards={apps} />
+      </div>
     </>
   )
 }
