@@ -1,10 +1,10 @@
 import { ChangeEvent, useState } from 'react'
 
 export const useInputTextArea = () => {
-  const [textArea, setTextArea] = useState<string>('')
+  const [textArea, setTextArea] = useState('')
 
-  const handlerTextArea = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    const { value } = event.target
+  const handlerTextArea = (ev: ChangeEvent<HTMLTextAreaElement>) => {
+    const { value } = ev.target
 
     setTextArea(value)
   }

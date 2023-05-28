@@ -4,6 +4,7 @@ type store = string[] | undefined
 export const invoiceByStore = (bodyLines: bodyLines, store: store) => {
   if (!bodyLines || !store) {
     return {
+      errorByStore: 'Essa loja não existe na fatura!',
       totalByStore: 0
     }
   }

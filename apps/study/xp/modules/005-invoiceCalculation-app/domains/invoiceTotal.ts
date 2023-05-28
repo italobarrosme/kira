@@ -7,8 +7,6 @@ export const invoiceTotal = (bodyLines: bodyLines) => {
     }
   }
 
-  console.log(bodyLines)
-
   let total = 0
 
   for (let i = 0; i < bodyLines.length; i++) {

@@ -20,12 +20,16 @@ export const useInvoiceReview = (invoice: Invoice, filter: Filter) => {
     }
   }
 
-  const { totalByStore } = invoiceByStore(bodyLines, filter['store'])
+  const { totalByStore, errorByStore } = invoiceByStore(
+    bodyLines,
+    filter['store']
+  )
 
   const invoiceTotalResult = Number(total)
   const invoiceByStoreResult = Number(totalByStore)
 
   return {
+    errorByStore,
     invoiceTotalResult,
     invoiceByStoreResult
   }
