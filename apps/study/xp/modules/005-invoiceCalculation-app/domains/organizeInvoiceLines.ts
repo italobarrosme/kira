@@ -2,8 +2,10 @@ import { invoiceLine } from './invoiceLine'
 
 type Invoice = string
 
-export const organizeInvoiceLines: any = (invoice: Invoice) => {
+export const organizeInvoiceLines = (invoice: Invoice) => {
   const allLines = invoice.split('\n')
+
+  console.log(allLines, 'here')
 
   const topLine = invoiceLine({ invoice: allLines, splitParam: ';', line: 0 })
 

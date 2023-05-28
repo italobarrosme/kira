@@ -2,8 +2,7 @@ import { InputSearch, InputTextArea, useInputTextArea } from '@kira/ui'
 import { useSearch } from '@kira/ui'
 import { formatMoney } from '@kira/utils'
 
-import { useInvoiceReview } from '../domains'
-import { useSearchFilter } from '../hook/'
+import { useSearchFilter, useInvoiceReview } from '../hook/'
 
 export const InvoiceCalculationApp = () => {
   const { handlerSearch, search } = useSearch()

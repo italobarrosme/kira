@@ -1,6 +1,6 @@
-import { invoiceTotal } from './invoiceTotal'
-import { invoiceByStore } from './invoiceByStore'
-import { organizeInvoiceLines } from './organizeInvoiceLines'
+import { invoiceTotal } from '../domains/invoiceTotal'
+import { invoiceByStore } from '../domains/invoiceByStore'
+import { organizeInvoiceLines } from '../domains/organizeInvoiceLines'
 
 type Invoice = string
 
