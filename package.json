@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "sx:dev": "nx serve study-xp",
-    "sx:build": "nx build study-xp"
+    "sx:build": "nx build study-xp",
+    "sx:test": "nx test study-xp --watch"
   },
   "private": true,
   "dependencies": {

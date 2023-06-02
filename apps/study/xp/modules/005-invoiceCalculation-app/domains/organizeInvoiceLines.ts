@@ -5,8 +5,6 @@ type Invoice = string
 export const organizeInvoiceLines = (invoice: Invoice) => {
   const allLines = invoice.split('\n')
 
-  console.log(allLines, 'here')
-
   const topLine = invoiceLine({ invoice: allLines, splitParam: ';', line: 0 })
 
   const bodyLines = allLines
