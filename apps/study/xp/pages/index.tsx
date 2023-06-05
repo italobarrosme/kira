@@ -1,4 +1,3 @@
-import { DefaultLayout } from '../layouts'
 import { GridCards } from '@kira/ui'
 
 export function Index() {

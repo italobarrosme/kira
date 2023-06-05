@@ -1,1 +1,1 @@
-export { presetTailwindCss } from './preset-tailwindcss'
+export { presetTailwindCss } from './presetTailwindcss'
