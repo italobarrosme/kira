@@ -5,5 +5,8 @@ export { InputSearch, useSearch } from './lib/pieces/InputSearch'
 export { InputRadio, useInputRadio } from './lib/pieces/InputRadio'
 export { Button } from './lib/pieces/Button'
 export { ShareButton } from './lib/pieces/ShareButton'
+export { InputFile } from './lib/pieces/InputFile'
+
 export { presetTailwindCss } from './lib/preset-tailwindcss'
+
 export { GridCards } from './lib/composition/GridCards'

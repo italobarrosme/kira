@@ -1,4 +1,10 @@
-import { InputText, useInputText, InputRadio, useInputRadio } from '@kira/ui'
+import {
+  InputText,
+  useInputText,
+  InputRadio,
+  useInputRadio,
+  InputFile
+} from '@kira/ui'
 import {} from '@kira/ui'
 
 export const FormReqApp = () => {
@@ -53,6 +59,11 @@ export const FormReqApp = () => {
           value="XG"
           onChange={(ev) => handlerShirts(ev)}
         ></InputRadio>
+      </div>
+
+      <div>
+        <h1>Input file</h1>
+        <InputFile></InputFile>
       </div>
     </section>
   )
