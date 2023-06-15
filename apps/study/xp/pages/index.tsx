@@ -31,7 +31,7 @@ export function Index() {
 
   return (
     <>
-      <div className="sm:flex w-screen h-screen gap-4 bg-black p-9">
+      <div className="sm:flex w-screen h-screen gap-4 bg-[url('/_space.webp')] bg-cover bg-no-repeat p-9">
         <h1 className="absolute top-[40%]">
           <span className="text-4xl font-bold text-primary-200">
             XP - Projects

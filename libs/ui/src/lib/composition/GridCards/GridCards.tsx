@@ -65,7 +65,7 @@ export const GridCards = ({ cards }: GridCardsProps) => {
         <motion.a
           key={card.id}
           href={card.link}
-          className="bg-secondary-400 rounded-full h-2 w-2 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
+          className="bg-secondary-400 backdrop-filter backdrop-brightness-110 rounded-full h-2 w-2 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
           animate={positions[card.id]}
           transition={{ duration: 2 }}
         >
