@@ -14,14 +14,19 @@ export const InputTextArea = ({
   onChange,
   placeholder,
   id,
-  icon = 'twemoji:neutral-face',
+  icon = '',
   ...props
 }: InputTextAreaProps) => {
   return (
-    <>
-      <label htmlFor={id}>{label}</label>
-      <div className="flex bg-secondary-500 rounded-md p-2 w-full text-secondary-100  max-w-xl">
-        <Icon icon={icon} />
+    <div className="w-full my-4">
+      <label
+        htmlFor={id}
+        className="uppercase text-secondary-500 font-bold my-2 text-xs"
+      >
+        {label}
+      </label>
+      <div className="flex gap-2 bg-secondary-500 rounded-md p-2 w-full text-secondary-100 max-w-xl">
+        {icon ? <Icon icon={icon} /> : null}
         <textarea
           onChange={(ev) => onChange(ev)}
           className="rounded-md focus:outline-none px-2 w-full h-60 max-h-96 p-4"
@@ -30,6 +35,6 @@ export const InputTextArea = ({
           {...props}
         />
       </div>
-    </>
+    </div>
   )
 }

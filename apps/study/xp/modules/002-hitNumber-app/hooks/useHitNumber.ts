@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 export const useHiNumber = () => {
   const [hitNumber, setHitNumber] = useState<number>()

@@ -1,1 +1,1 @@
-export { InputMask } from './InputMask';
+export { InputMask } from './InputMask'

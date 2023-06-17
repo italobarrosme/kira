@@ -3,18 +3,18 @@ export const presetTailwindCss = () => ({
     extend: {
       colors: {
         primary: {
-          100: '#FD7800',
-          200: '#FF8C00',
-          300: '#FFA000',
-          400: '#FFB400',
-          500: '#FFC800'
+          100: '#3b5998',
+          200: '#4c69ba',
+          300: '#5d7eb7',
+          400: '#6e93c4',
+          500: '#80a8d1'
         },
         secondary: {
-          100: '#000000',
-          200: '#C1C1C',
-          300: '#E3E3E3',
-          400: '#F2F2F2',
-          500: '#FFFFFF'
+          100: '#c5c9e1',
+          200: '#d0d4e6',
+          300: '#dadef0',
+          400: '#e5e7f4',
+          500: '#eff1f7'
         }
       },
       fontFamily: {

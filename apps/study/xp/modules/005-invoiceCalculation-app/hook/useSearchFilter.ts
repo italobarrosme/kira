@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react'
 
 type filter = {
@@ -12,7 +13,7 @@ type handleFilterProps = {
 export const useSearchFilter = ({ type, value }: handleFilterProps) => {
   const [filter, setFilter] = useState<filter>({ store: [] })
 
-  const handleFilter = () => {
+  const handlerFilter = () => {
     const valueFormat = value.trim().toLowerCase()
     if (!valueFormat || valueFormat === '') {
       setFilter((prev) => {
@@ -35,7 +36,7 @@ export const useSearchFilter = ({ type, value }: handleFilterProps) => {
   }
 
   useEffect(() => {
-    handleFilter()
+    handlerFilter()
   }, [value])
 
   return {

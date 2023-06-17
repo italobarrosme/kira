@@ -9,8 +9,8 @@ export type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button = ({
-  icon = 'fluent-emoji-flat:bug',
-  label,
+  icon = '',
+  label = 'label',
   onClick,
   className,
   ...props
@@ -19,7 +19,7 @@ export const Button = ({
     <button
       className={clsx(
         className,
-        'disabled:bg-secondary-300 w-full disabled:text-secondary-100 bg-primary-200 border-2 justify-center border-transparent text-white font-bold py-2 px-4 rounded flex gap-4 hover:bg-primary-100 hover:text-secondary-100 hover:border-2 hover:border-secondary-100'
+        'disabled:bg-secondary-300 uppercase w-full disabled:text-secondary-100 bg-primary-200 border-2 justify-center border-transparent text-white font-bold py-2 px-4 rounded flex gap-4 hover:bg-primary-100 hover:text-secondary-100 hover:border-2 hover:border-secondary-100'
       )}
       onClick={onClick}
       {...props}

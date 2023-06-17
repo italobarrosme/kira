@@ -1,15 +1,23 @@
-import { Icon } from '@iconify/react';
-import { ChangeEvent, InputHTMLAttributes } from 'react';
+import { Icon } from '@iconify/react'
+import { ChangeEvent, InputHTMLAttributes } from 'react'
 
-type masks = 'cpf' | 'cnpj' | 'phone' | 'cep' | 'currency' | 'date' | 'time' | 'custom';
+type masks =
+  | 'cpf'
+  | 'cnpj'
+  | 'phone'
+  | 'cep'
+  | 'currency'
+  | 'date'
+  | 'time'
+  | 'custom'
 
 type InputMaskProps = {
-  id: string;
-  label: string;
-  icon?: string;
-  mask: masks;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-} & InputHTMLAttributes<HTMLInputElement>;
+  id: string
+  label: string
+  icon?: string
+  mask: masks
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
+} & InputHTMLAttributes<HTMLInputElement>
 
 export const InputMask = ({
   label,
@@ -18,34 +26,47 @@ export const InputMask = ({
   icon = 'twemoji:neutral-face',
   mask,
   onChange
-}:InputMaskProps) => {
-
+}: InputMaskProps) => {
   switch (mask) {
     case 'cpf':
       return (
         <>
-          <label htmlFor={id} className='uppercase text-secondary-500 font-bold my-2'>{label}</label>
-          <div className='flex items-center bg-secondary-500 rounded-md px-2 h-8 w-full max-w-xl'>
+          <label
+            htmlFor={id}
+            className="uppercase text-secondary-500 font-bold my-2"
+          >
+            {label}
+          </label>
+          <div className="flex items-center bg-secondary-500 rounded-md px-2 h-8 w-full max-w-xl">
             <Icon icon={icon} />
-            <input onChange={(ev) => onChange(ev)} className='rounded-md focus:outline-none px-2 w-full' value={'000.000.000-00'} type="text" maxLength={2} min={0} max={14} id={id} placeholder={placeholder} />
+            <input
+              onChange={(ev) => onChange(ev)}
+              className="rounded-md focus:outline-none px-2 w-full"
+              value={'000.000.000-00'}
+              type="text"
+              maxLength={2}
+              min={0}
+              max={14}
+              id={id}
+              placeholder={placeholder}
+            />
           </div>
         </>
       )
     case 'cnpj':
-      break;
+      break
     case 'phone':
-      break;
+      break
     case 'cep':
-      break;
+      break
     case 'currency':
-      break;
+      break
     case 'date':
-      break;
+      break
     case 'time':
-      break;
+      break
     case 'custom':
-      break;
+      break
     default:
   }
-
 }
