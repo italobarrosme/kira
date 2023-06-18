@@ -29,7 +29,7 @@ export const InputTextArea = ({
         {icon ? <Icon icon={icon} /> : null}
         <textarea
           onChange={(ev) => onChange(ev)}
-          className="rounded-md focus:outline-none px-2 w-full h-60 max-h-96 p-4"
+          className="rounded-md focus:outline-none px-2 w-full h-60 max-h-96"
           id={id}
           placeholder={placeholder}
           {...props}

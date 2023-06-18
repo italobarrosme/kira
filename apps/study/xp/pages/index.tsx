@@ -26,6 +26,11 @@ export function Index() {
       id: 5,
       title: 'Invoice Calculation',
       link: '/005-invoice-calculation'
+    },
+    {
+      id: 6,
+      title: 'Todo List',
+      link: '/006-todo-list'
     }
   ]
 

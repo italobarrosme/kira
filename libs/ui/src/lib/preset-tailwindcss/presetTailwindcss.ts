@@ -15,6 +15,13 @@ export const presetTailwindCss = () => ({
           300: '#dadef0',
           400: '#e5e7f4',
           500: '#eff1f7'
+        },
+        accent: {
+          100: '#ffeb3b',
+          200: '#fdd835',
+          300: '#fbc02d',
+          400: '#f9a825',
+          500: '#f57f17'
         }
       },
       fontFamily: {

@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react'
 import { clsx } from 'clsx'
-import { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, forwardRef } from 'react'
 
 export type ButtonProps = {
   label?: string
@@ -24,7 +24,7 @@ export const Button = ({
       onClick={onClick}
       {...props}
     >
-      <Icon icon={icon} width={24} />
+      {icon ? <Icon icon={icon} width={24} /> : null}
       {label}
     </button>
   )
