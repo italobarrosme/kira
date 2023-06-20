@@ -19,8 +19,6 @@ export const TodoListAppTemplate = () => {
   const toggleForm = () => setOpenForm(!isOpenForm)
   useOnClickOutside(ref, toggleForm)
 
-  console.log('listPlans', listPlans)
-
   return (
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-3xl my-4">Todo List App</h1>
