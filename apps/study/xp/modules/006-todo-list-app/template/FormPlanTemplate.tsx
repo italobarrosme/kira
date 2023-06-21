@@ -7,6 +7,7 @@ import {
 } from '@kira/ui'
 
 import { useStorePlans } from '../hook'
+import { generateId } from '@kira/utils'
 
 export const FormPlanTemplate = () => {
   const { handlerChange: changeTitlePlan, value: valueTitlePlan } =
@@ -24,7 +25,7 @@ export const FormPlanTemplate = () => {
 
   const submitForm = () => {
     addPlan({
-      id: Math.random().toString(36).slice(2, 5),
+      id: generateId(5),
       title: valueTitlePlan,
       description: valueDescriptionPlan,
       category: valueCategoryPlan,

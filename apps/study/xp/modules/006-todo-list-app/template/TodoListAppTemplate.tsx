@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { FormPlanTemplate } from './FormPlanTemplate'
 import { Button } from '@kira/ui'
 import { useOnClickOutside } from 'usehooks-ts'
@@ -22,7 +22,6 @@ export const TodoListAppTemplate = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <h1 className="text-3xl my-4">Todo List App</h1>
-
       {isOpenForm ? (
         <div ref={ref}>
           <FormPlanTemplate />
@@ -30,12 +29,9 @@ export const TodoListAppTemplate = () => {
       ) : null}
 
       <div className="w-2/4">
-        {listPlans.length > 0
-          ? listPlans.map((plan: Plan) => (
-              <CardItem key={plan.id} item={plan} removeItem={removePlan} />
-            ))
-          : null}
-
+        {listPlans.map((plan: Plan) => (
+          <CardItem key={plan.id} item={plan} removeItem={removePlan} />
+        ))}
         <div>
           <Button label="Adicionar task" onClick={toggleForm} />
         </div>
