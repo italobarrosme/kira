@@ -3,7 +3,7 @@ import { Plan } from '../type'
 export const validatePlan = (plan: Plan, plans: Plan[]) => {
   const planExists = plans.find((item) => item.id === plan.id)
   let isValid = true
-  let messageError = ''
+  let messageError = 'coracao'
 
   const validations = [
     { check: () => planExists, message: 'Plano já existe' },

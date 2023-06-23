@@ -21,7 +21,7 @@ export const TodoListAppTemplate = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className="text-3xl my-4">Todo List App</h1>
+      <h1 className="text-3xl my-4">Todo List Advanced App</h1>
       {isOpenForm ? (
         <div ref={ref}>
           <FormPlanTemplate />
@@ -33,7 +33,7 @@ export const TodoListAppTemplate = () => {
           <CardItem key={plan.id} item={plan} removeItem={removePlan} />
         ))}
         <div>
-          <Button label="Adicionar task" onClick={toggleForm} />
+          <Button label="Adicionar Plano" onClick={toggleForm} />
         </div>
       </div>
     </div>

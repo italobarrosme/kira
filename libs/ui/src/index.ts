@@ -9,4 +9,8 @@ export { InputFile } from './lib/pieces/InputFile'
 
 export { presetTailwindCss } from './lib/preset-tailwindcss'
 
+export {
+  ToastNotification,
+  useToastNotification
+} from './lib/composition/ToastNotification'
 export { GridCards } from './lib/composition/GridCards'
