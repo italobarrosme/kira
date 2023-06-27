@@ -19,8 +19,8 @@ export const CardItem = ({ item, removeItem, markItem }: CardItemProps) => {
       <div className="absolute right-2 top-2 text-xs font-semibold">
         <p>{item.date}</p>
       </div>
-      <h1 className="text-4xl font-bold my-4">{item.title}</h1>
-      <p className="text-sm my-4 h-14 bg-secondary-500 text-primary-100 p-4 rounded-md">
+      <h1 className="text-2xl font-bold my-4">{item.title}</h1>
+      <p className="text-sm h-14 bg-secondary-500 text-primary-100 p-2 rounded-sm">
         {item.description}
       </p>
       <p className="font-bold text-accent-200 my-4">#{item.category}</p>

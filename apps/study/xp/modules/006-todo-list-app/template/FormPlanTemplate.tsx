@@ -7,13 +7,13 @@ import {
   useToastNotification
 } from '@kira/ui'
 
-import { useStorePlans } from '../store'
+import { storePlans } from '../store'
 import { generateId } from '@kira/utils'
 import { validatePlan } from './../domains/'
 
 export const FormPlanTemplate = () => {
   const { addNotification } = useToastNotification()
-  const { addPlan, plans } = useStorePlans()
+  const { addPlan, plans } = storePlans()
 
   const { handlerChange: changeTitlePlan, value: valueTitlePlan } =
     useInputText('')
