@@ -1,5 +1,6 @@
 import { Button } from '@kira/ui'
 import { Plan } from '../type'
+import clsx from 'clsx'
 
 type CardItemProps = {
   item: Plan
@@ -9,7 +10,12 @@ type CardItemProps = {
 
 export const CardItem = ({ item, removeItem, markItem }: CardItemProps) => {
   return (
-    <div className="bg-primary-300 p-4 rounded-md mb-4 relative">
+    <div
+      className={clsx(
+        'p-4 rounded-md mb-4 relative',
+        item.isCompleted ? 'bg-green-500' : 'bg-primary-300'
+      )}
+    >
       <div className="absolute right-2 top-2 text-xs font-semibold">
         <p>{item.date}</p>
       </div>
@@ -18,7 +24,7 @@ export const CardItem = ({ item, removeItem, markItem }: CardItemProps) => {
         {item.description}
       </p>
       <p className="font-bold text-accent-200 my-4">#{item.category}</p>
-      <form className="flex gap-2">
+      <div className="flex gap-2">
         {removeItem ? (
           <Button
             label="deletar"
@@ -35,7 +41,7 @@ export const CardItem = ({ item, removeItem, markItem }: CardItemProps) => {
             }}
           ></Button>
         ) : null}
-      </form>
+      </div>
     </div>
   )
 }

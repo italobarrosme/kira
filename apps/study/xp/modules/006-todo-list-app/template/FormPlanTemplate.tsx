@@ -7,7 +7,7 @@ import {
   useToastNotification
 } from '@kira/ui'
 
-import { useStorePlans } from '../hook'
+import { useStorePlans } from '../store'
 import { generateId } from '@kira/utils'
 import { validatePlan } from './../domains/'
 

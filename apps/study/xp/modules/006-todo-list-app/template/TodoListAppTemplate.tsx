@@ -1,19 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FormPlanTemplate } from './FormPlanTemplate'
 import { Button } from '@kira/ui'
 import { useOnClickOutside } from 'usehooks-ts'
 import { useRef } from 'react'
-import { useStorePlans } from '../hook'
+import { storePlans } from '../store'
 import { Plan } from '../type'
 import { CardItem } from '../components'
 
 export const TodoListAppTemplate = () => {
-  // const markPlan = () => console.log('markPlan')
   // const filterPlans = () => console.log('filterPlans')
 
   const ref = useRef(null)
+  const { plans: listPlans, removePlan, markPlanAsCompleted } = storePlans()
+  const [plans, setPlans] = useState<Plan[]>([])
 
-  const { plans: listPlans, removePlan } = useStorePlans()
+  useEffect(() => {
+    setPlans(listPlans)
+  }, [listPlans])
 
   const [isOpenForm, setOpenForm] = useState(false)
   const toggleForm = () => setOpenForm(!isOpenForm)
@@ -29,8 +32,13 @@ export const TodoListAppTemplate = () => {
       ) : null}
 
       <div className="w-2/4">
-        {listPlans.map((plan: Plan) => (
-          <CardItem key={plan.id} item={plan} removeItem={removePlan} />
+        {plans.map((plan: Plan) => (
+          <CardItem
+            key={plan.id}
+            item={plan}
+            removeItem={() => removePlan(plan.id)}
+            markItem={() => markPlanAsCompleted(plan.id)}
+          />
         ))}
         <div>
           <Button label="Adicionar Plano" onClick={toggleForm} />

@@ -9,7 +9,7 @@ type StorePlans = {
   markPlanAsCompleted: (id: string) => void
 }
 
-export const useStorePlans = create(
+export const storePlans = create(
   persist<StorePlans>(
     (set) => ({
       plans: [],
