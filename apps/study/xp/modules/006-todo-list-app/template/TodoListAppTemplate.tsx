@@ -56,7 +56,7 @@ export const TodoListAppTemplate = () => {
         </div>
       ) : null}
 
-      <div className="w-2/4 my-4">
+      <div className="my-4 w-80">
         {plans.map((plan: Plan) => (
           <CardItem
             key={plan.id}
@@ -65,7 +65,7 @@ export const TodoListAppTemplate = () => {
             markItem={() => markPlanAsCompleted(plan.id)}
           />
         ))}
-        <div>
+        <div className="">
           <Button label="Adicionar Plano" onClick={toggleForm} />
         </div>
       </div>

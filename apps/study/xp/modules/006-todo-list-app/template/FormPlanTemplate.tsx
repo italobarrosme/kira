@@ -59,7 +59,7 @@ export const FormPlanTemplate = () => {
   }
 
   return (
-    <div className="w-80 bg-primary-300 p-4 rounded-md absolute right-0 top-0 z-50 shadow-xl">
+    <div className="w-80 bg-primary-300 p-4 rounded-sm absolute right-0 top-0 z-50 shadow-xl min-h-screen">
       <h1 className="mb-4">Formulario para adicionar um novo plano</h1>
       <div>
         <InputText

@@ -11,7 +11,7 @@ export const XpLayout = ({ children, title }: Component) => {
         <meta name="description" content={title} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-primary-100 w-full font-poppins h-screen px-4 text-secondary-500 ">
+      <main className="bg-primary-100 w-full font-poppin min-h-screen px-4 text-secondary-500 ">
         <Link href="/" className="flex items-center p-2 w-36">
           <Icon icon="twemoji:backhand-index-pointing-left" width={24} />
           <span className="p-2 text-2xl font-bold ">Voltar</span>
