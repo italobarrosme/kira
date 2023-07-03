@@ -3,7 +3,7 @@ import { InvoiceCalculationApp } from '../../modules/005-invoiceCalculation-app'
 
 const InvoiceCalculation = () => {
   return (
-    <XpLayout title="Weather APP">
+    <XpLayout title="Invoice Calculation">
       <InvoiceCalculationApp />
     </XpLayout>
   )

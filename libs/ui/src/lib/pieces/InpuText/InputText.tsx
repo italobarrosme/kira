@@ -17,14 +17,14 @@ export const InputText = ({
   ...props
 }: InputTextProps) => {
   return (
-    <div className="w-full my-4">
+    <div className="w-full my-4 max-w-xl">
       <label
         htmlFor={id}
         className="uppercase text-secondary-500 font-bold my-2 text-xs"
       >
         {label}
       </label>
-      <div className="flex gap-2 items-center bg-secondary-500 rounded-md px-2 h-8 w-full max-w-xl text-secondary-100">
+      <div className="flex gap-2 items-center bg-secondary-500 rounded-md px-2 h-8 w-full text-secondary-100">
         {icon ? <Icon icon={icon} /> : null}
         <input
           onChange={(ev) => onChange(ev)}
