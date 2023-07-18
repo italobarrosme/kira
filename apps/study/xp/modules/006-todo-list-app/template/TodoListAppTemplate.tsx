@@ -39,7 +39,7 @@ export const TodoListAppTemplate = () => {
   useOnClickOutside(ref, toggleForm)
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center py-14">
       <h1 className="text-3xl my-2">Todo List Advanced App</h1>
       <div className="my-4 w-80">
         <InputSearch

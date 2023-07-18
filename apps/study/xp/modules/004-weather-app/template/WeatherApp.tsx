@@ -11,7 +11,7 @@ export const WeatherApp = () => {
 
   return (
     <>
-      <div className="py-4 flex justify-center items-center gap-4 text-secondary-500 font-bold text-3xl">
+      <div className="py-14 flex justify-center items-center gap-4 text-secondary-500 font-bold text-3xl">
         <Icon icon="ph:cloud-fog" width={32} />
         <h1>Weather App</h1>
       </div>

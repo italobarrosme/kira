@@ -6,7 +6,7 @@ export const CronusApp = () => {
     useControlCronus()
 
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center py-14">
       <h1 className="text-4xl font-bold">Cronus</h1>
 
       <div className="my-8 w-52 flex justify-center">

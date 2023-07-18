@@ -18,7 +18,7 @@ export const InvoiceCalculationApp = () => {
 
   return (
     <>
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center py-14">
         <InputTextArea
           label="Coloque sua fatura copiada de um csv"
           id="invoice"

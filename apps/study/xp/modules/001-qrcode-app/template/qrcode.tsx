@@ -6,7 +6,7 @@ export const QrcodeApp = () => {
   const { text, handleChange, viewQRCode, donwloadQRCode } = useQrcode()
 
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center py-14">
       <h1 className="font-bold text-2xl text-secondary-500 my-2">
         Gerar QRCODE
       </h1>

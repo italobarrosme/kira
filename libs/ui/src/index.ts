@@ -6,6 +6,7 @@ export { InputRadio, useInputRadio } from './lib/pieces/InputRadio'
 export { Button } from './lib/pieces/Button'
 export { ShareButton } from './lib/pieces/ShareButton'
 export { InputFile } from './lib/pieces/InputFile'
+export { Title } from './lib/pieces/Title'
 
 export { presetTailwindCss } from './lib/preset-tailwindcss'
 

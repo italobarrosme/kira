@@ -31,6 +31,11 @@ export function Index() {
       id: 6,
       title: 'Todo List',
       link: '/006-todo-list'
+    },
+    {
+      id: 7,
+      title: 'Scroll Animation',
+      link: '/007-scroll-animation'
     }
   ]
 
