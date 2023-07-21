@@ -13,7 +13,7 @@ export const QrcodeApp = () => {
       {text ? (
         <canvas ref={viewQRCode} />
       ) : (
-        <div className="text-primary-500">
+        <div className="text-brand-primary">
           <Icon width={200} icon="mdi:question-mark-box" />
         </div>
       )}
@@ -26,7 +26,7 @@ export const QrcodeApp = () => {
       />
       {text ? (
         <button
-          className="bg-secondary-100 text-secondary-500 rounded-md w-32 flex justify-center p-2 m-4 hover:bg-primary-400 hover:text-secondary-100"
+          className="bg-brand-primary text-brand-dark rounded-md w-32 flex justify-center p-2 m-4 hover:bg-brand-accent"
           onClick={() => donwloadQRCode()}
         >
           <Icon icon="mdi:download" width={24} />

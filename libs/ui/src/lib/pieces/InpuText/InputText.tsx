@@ -2,7 +2,7 @@ import { InputHTMLAttributes, ChangeEvent } from 'react'
 import { Icon } from '@iconify/react'
 
 export type InputTextProps = {
-  label: string
+  label?: string
   icon?: string
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 } & InputHTMLAttributes<HTMLInputElement>
@@ -20,11 +20,11 @@ export const InputText = ({
     <div className="w-full my-4 max-w-xl">
       <label
         htmlFor={id}
-        className="uppercase text-secondary-500 font-bold my-2 text-xs"
+        className="uppercase text-brand-dark font-bold my-2 text-xs"
       >
         {label}
       </label>
-      <div className="flex gap-2 items-center bg-secondary-500 rounded-md px-2 h-8 w-full text-secondary-100">
+      <div className="flex gap-2 items-center bg-brand-light rounded-md px-2 h-8 w-full text-brand-dark">
         {icon ? <Icon icon={icon} /> : null}
         <input
           onChange={(ev) => onChange(ev)}

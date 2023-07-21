@@ -36,6 +36,11 @@ export function Index() {
       id: 7,
       title: 'Scroll Animation',
       link: '/007-scroll-animation'
+    },
+    {
+      id: 8,
+      title: 'Chatbot',
+      link: '/008-chatbotAI'
     }
   ]
 
@@ -43,7 +48,7 @@ export function Index() {
     <>
       <div className="sm:flex w-screen h-screen gap-4 bg-[url('/_space.webp')] bg-cover bg-no-repeat p-9">
         <h1 className="absolute top-[40%]">
-          <span className="text-4xl font-bold text-primary-200">
+          <span className="text-4xl font-bold text-bradn-light">
             XP - Projects
           </span>
         </h1>

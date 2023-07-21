@@ -2,26 +2,12 @@ export const presetTailwindCss = () => ({
   theme: {
     extend: {
       colors: {
-        primary: {
-          100: '#3b5998',
-          200: '#4c69ba',
-          300: '#5d7eb7',
-          400: '#6e93c4',
-          500: '#80a8d1'
-        },
-        secondary: {
-          100: '#c5c9e1',
-          200: '#d0d4e6',
-          300: '#dadef0',
-          400: '#e5e7f4',
-          500: '#eff1f7'
-        },
-        accent: {
-          100: '#ffeb3b',
-          200: '#fdd835',
-          300: '#fbc02d',
-          400: '#f9a825',
-          500: '#f57f17'
+        brand: {
+          primary: '#F29F05',
+          secondary: '#D97904',
+          accent: '#FF6702',
+          dark: '#262523',
+          light: '#f9f9f9'
         }
       },
       fontFamily: {

@@ -14,13 +14,13 @@ export const XpLayout = ({ children, title, className }: Component) => {
       </Head>
       <main
         className={cn(
-          'bg-primary-100 w-full font-poppin px-4 text-secondary-500',
+          'bg-brand-dark w-full font-poppin px-4 text-brand-light',
           className
         )}
       >
         <Link
           href="/"
-          className="flex items-center p-2 w-36 fixed left-0 z-[60]"
+          className="flex items-center p-2 w-36 fixed left-4 z-[60]"
         >
           <Icon icon="twemoji:backhand-index-pointing-left" width={24} />
           <span className="p-2 text-2xl font-bold ">Voltar</span>
