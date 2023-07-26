@@ -15,5 +15,10 @@ export const getResponseChat = async (content: string) => {
     })
   }).then((res) => res.json())
 
-  return response
+  const { choices, error } = response
+
+  return {
+    choices,
+    error
+  }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextApiRequest, NextApiResponse } from 'next'
 import { Configuration, OpenAIApi } from 'openai'
 
@@ -13,14 +14,16 @@ export default async function handler(
 
   const { messages } = req.body
 
-  const response = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages
-  })
+  try {
+    const response = await openai.createChatCompletion({
+      model: 'gpt-3.5-turbo',
+      messages
+    })
 
-  const { choices } = response.data
+    const { choices } = response.data
 
-  console.log('choices', choices)
-
-  return res.status(200).json({ choices })
+    return res.status(200).json({ choices, error: null })
+  } catch (error: any) {
+    return res.status(500).json({ error: error.message, choices: null })
+  }
 }

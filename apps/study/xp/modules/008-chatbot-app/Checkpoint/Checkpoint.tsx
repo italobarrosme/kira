@@ -7,33 +7,33 @@ export const Checkpoint = () => {
   const [input, setInput] = useState('')
 
   const [messages, setMessages] = useState<any>()
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleInputChange = (e: { target: { value: string } }) => {
     setInput(e.target.value)
   }
 
   const handleSubmit = async () => {
-    const data = await getResponseChat(input)
+    setIsLoading(true)
+    try {
+      const { choices } = await getResponseChat(input)
 
-    setMessages((prev: any) => [
-      ...(prev || []),
-      { role: 'user', content: input }
-    ])
+      setMessages((prev: any) => [
+        ...prev,
+        { role: 'user', content: input },
+        ...(choices || []).map((item: any) => ({
+          role: item.message.role,
+          content: item.message.content
+        }))
+      ])
 
-    if (data) {
-      const { choices } = data
-
-      const messages = choices.map((item: any) => ({
-        role: item.message.role,
-        content: item.message.content
-      }))
-
-      setMessages((prev: any) => [...prev, ...messages])
-
-      console.log(messages, 'BOT MESSAGES')
+      setInput('')
+    } catch (error) {
+      console.log('error', error)
+    } finally {
+      // Definir isLoading como false após a resposta ser recebida (com sucesso ou erro)
+      setIsLoading(false)
     }
-
-    setInput('')
   }
 
   return (
@@ -46,7 +46,12 @@ export const Checkpoint = () => {
             value={input}
             maxLength={250}
           />
-          <Button label="Send" className="w-36" onClick={handleSubmit} />
+          <Button
+            label="Send"
+            className="w-36"
+            onClick={handleSubmit}
+            isLoading={isLoading}
+          />
         </div>
       </CardChat>
     </div>
