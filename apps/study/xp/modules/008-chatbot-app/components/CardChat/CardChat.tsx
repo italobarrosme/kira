@@ -1,39 +1,54 @@
+import { Icon } from '@iconify/react'
 import { Title } from '@kira/ui'
 import { ReactNode } from 'react'
 
+export type Message = {
+  role: 'assistant' | 'user'
+  content: string
+}
+
 type CardChatProps = {
-  id: string | number
   subject: string
-  messages?: any[]
+  messages?: Message[]
   children: ReactNode
 }
 
-export const CardChat = ({
-  id,
-  subject,
-  messages,
-  children
-}: CardChatProps) => {
+export const CardChat = ({ subject, messages, children }: CardChatProps) => {
   return (
-    <div className="flex flex-col items-center justify-center w-80 h-1/2 relative overflow-y-auto">
-      <div className="w-full flex justify-center">
-        <Title label={subject} className="absolute top-0" />
+    <>
+      <div className="w-full max-w-5xl flex justify-center">
+        <Title label={subject} className="p-4" />
       </div>
-      {messages?.map((message) => (
-        <div key={message.id} className="flex flex-col gap-2">
-          {message.role === 'user' ? (
-            <p>
-              <span className="text-white">{message.content}</span>
-            </p>
-          ) : (
-            <p>
-              <span className="text-secondary-100">{message.content}</span>
-            </p>
-          )}
+      <div className="flex flex-col items-center justify-between w-full max-w-5xl h-screen  relative overflow-y-auto overflow-x-hidden p-4">
+        <div className="flex flex-col justify-between gap-8">
+          {messages
+            ? messages.map((item, index) => (
+                <div key={index}>
+                  {item.role === 'assistant' ? (
+                    <div className="flex gap-4 items-center w-full">
+                      <Icon
+                        icon={'mdi:robot'}
+                        width={32}
+                        className="text-brand-dark rounded-full bg-brand-accent p-2 h-full"
+                      />
+                      <p className="text-brand-accent w-full">{item.content}</p>
+                    </div>
+                  ) : (
+                    <div className="flex gap-4 items-center">
+                      <Icon
+                        icon={'mdi:account'}
+                        width={32}
+                        className="text-brand-light rounded-full bg-brand-primary p-2 h-full"
+                      />
+                      <p className="">{item.content}</p>
+                    </div>
+                  )}
+                </div>
+              ))
+            : null}
         </div>
-      ))}
-
-      <div className="absolute bottom-0 w-full">{children}</div>
-    </div>
+      </div>
+      <div className="w-full max-w-5xl p-4">{children}</div>
+    </>
   )
 }

@@ -14,13 +14,14 @@ export const InputRadio = ({
   ...props
 }: InputRadioProps) => {
   return (
-    <div className="flex items-center gap-4 rounded-md px-2 h-8 w-full max-w-xl text-primary-100">
+    <div className="flex items-center gap-4 rounded-md px-2 h-8 w-full max-w-xl text-brand-primary">
       <input
         onChange={(ev) => onChange(ev)}
-        className="w-6 h-6 text-secondary-300 cursor-pointer accent-primary-500"
+        className="w-6 h-6 text-brand-light cursor-pointer accent-primary-500"
         name={name}
         type="radio"
         id={id}
+        {...props}
       />
       <label
         htmlFor={id}

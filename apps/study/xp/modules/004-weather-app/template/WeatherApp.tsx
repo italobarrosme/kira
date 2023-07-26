@@ -11,7 +11,7 @@ export const WeatherApp = () => {
 
   return (
     <>
-      <div className="py-14 flex justify-center items-center gap-4 text-secondary-500 font-bold text-3xl">
+      <div className="py-14 flex justify-center items-center gap-4 text-brand-light font-bold text-3xl">
         <Icon icon="ph:cloud-fog" width={32} />
         <h1>Weather App</h1>
       </div>
@@ -27,14 +27,14 @@ export const WeatherApp = () => {
           }
         }}
         transition={{ duration: 0.2 }}
-        className="mx-auto w-80 bg-secondary-400 rounded-xl p-4 font-poppins"
+        className="mx-auto w-80 bg-brand-light rounded-xl p-4 font-poppins"
       >
         <div className="flex gap-4 text-secondary-100 justify-between items-center">
           <div className="w-2">
             <Icon
               icon="ph:map-pin-fill"
               width={32}
-              className="mx-auto text-primary-100"
+              className="mx-auto text-brand-dark"
             />
           </div>
           <InputSearch
@@ -45,7 +45,7 @@ export const WeatherApp = () => {
           />
         </div>
 
-        <div className="text-secondary-100 flex gap-4 justify-center items-start p-1">
+        <div className="text-brand-dark flex gap-4 justify-center items-start p-1">
           {weather ? (
             <motion.div
               initial={{ opacity: 0 }}

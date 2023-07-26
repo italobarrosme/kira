@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react'
-import { clsx } from 'clsx'
-import { ButtonHTMLAttributes, forwardRef } from 'react'
+import { cn } from '@kira/utils'
+import { ButtonHTMLAttributes } from 'react'
 
 export type ButtonProps = {
   label?: string
@@ -17,9 +17,9 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={clsx(
-        className,
-        'disabled:bg-secondary-300 text-xs uppercase w-full disabled:text-secondary-100 bg-primary-200 border-2 justify-center border-transparent text-white font-bold py-2 px-4 rounded flex gap-4 hover:bg-primary-100 hover:text-secondary-100 hover:border-2 hover:border-secondary-100'
+      className={cn(
+        'disabled:bg-gray-300 text-xs uppercase w-full disabled:text-brand-light bg-brand-primary border-2 justify-center border-transparent text-brand-dark font-bold py-2 px-4 rounded flex gap-4 hover:bg-brand-accent hover:text-secondary-100 hover:border-2 hover:border-secondary-100',
+        className
       )}
       onClick={onClick}
       {...props}

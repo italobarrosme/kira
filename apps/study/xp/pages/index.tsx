@@ -48,7 +48,7 @@ export function Index() {
     <>
       <div className="sm:flex w-screen h-screen gap-4 bg-[url('/_space.webp')] bg-cover bg-no-repeat p-9">
         <h1 className="absolute top-[40%]">
-          <span className="text-4xl font-bold text-bradn-light">
+          <span className="text-4xl font-bold text-brand-light">
             XP - Projects
           </span>
         </h1>

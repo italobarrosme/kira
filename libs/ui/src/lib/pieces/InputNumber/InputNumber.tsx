@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, ChangeEvent } from 'react'
 import { Icon } from '@iconify/react'
-import clsx from 'clsx'
+import { cn } from '@kira/utils'
 
 type InputNumberProps = {
   id: string
@@ -17,27 +17,22 @@ export const InputNumber = ({
   icon = 'twemoji:neutral-face',
   maxNumber,
   onChange,
-  className,
   autoComplete
 }: InputNumberProps) => {
   return (
     <>
-      <label
-        htmlFor={id}
-        className="uppercase text-secondary-500 font-bold my-2"
-      >
+      <label htmlFor={id} className="uppercase text-brand-light font-bold my-2">
         {label}
       </label>
       <div
-        className={clsx(
-          'flex items-center bg-secondary-500 rounded-md px-2 h-8 w-full max-w-xl',
-          className
+        className={cn(
+          'flex items-center bg-brand-light rounded-md px-2 h-8 w-full max-w-xl'
         )}
       >
         <Icon icon={icon} />
         <input
           onChange={(ev) => onChange(ev)}
-          className="rounded-md focus:outline-none px-2 w-full"
+          className={cn('rounded-md focus:outline-none px-2 w-full font-bold')}
           type="text"
           maxLength={1}
           min={0}

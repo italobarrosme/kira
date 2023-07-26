@@ -65,11 +65,11 @@ export const GridCards = ({ cards }: GridCardsProps) => {
         <motion.a
           key={card.id}
           href={card.link}
-          className="bg-secondary-400 backdrop-filter backdrop-brightness-110 rounded-full h-2 w-2 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
+          className="bg-brand-light backdrop-filter backdrop-brightness-110 rounded-full h-1 w-1 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
           animate={positions[card.id]}
           transition={{ duration: 2 }}
         >
-          <span className="group-hover/card:block lg:hidden text-primary-400 text-xs font-bold ease-in-out text-left absolute left-7 w-24">
+          <span className="group-hover/card:block lg:hidden text-brand-light text-xs font-bold ease-in-out text-left absolute left-7 w-24">
             {card.title}
           </span>
         </motion.a>

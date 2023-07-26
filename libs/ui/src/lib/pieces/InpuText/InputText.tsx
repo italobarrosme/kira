@@ -17,10 +17,10 @@ export const InputText = ({
   ...props
 }: InputTextProps) => {
   return (
-    <div className="w-full my-4 max-w-xl">
+    <div className="w-full my-4">
       <label
         htmlFor={id}
-        className="uppercase text-brand-dark font-bold my-2 text-xs"
+        className="uppercase text-brand-light font-bold my-2 text-xs"
       >
         {label}
       </label>

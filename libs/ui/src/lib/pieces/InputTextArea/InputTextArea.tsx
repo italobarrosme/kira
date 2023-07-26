@@ -21,15 +21,15 @@ export const InputTextArea = ({
     <div className="w-full my-4 max-w-xl">
       <label
         htmlFor={id}
-        className="uppercase text-secondary-500 font-bold my-2 text-xs"
+        className="uppercase text-brand-light font-bold my-2 text-xs"
       >
         {label}
       </label>
-      <div className="flex gap-2 bg-secondary-500 rounded-md p-2 w-full text-secondary-100">
+      <div className="flex gap-2 bg-brand-light rounded-md p-2 w-full text-brand-dark">
         {icon ? <Icon icon={icon} /> : null}
         <textarea
           onChange={(ev) => onChange(ev)}
-          className="rounded-md focus:outline-none px-2 w-full h-60 max-h-96"
+          className="rounded-md focus:outline-none px-2 w-full h-60 max-h-96 font-bold"
           id={id}
           placeholder={placeholder}
           {...props}

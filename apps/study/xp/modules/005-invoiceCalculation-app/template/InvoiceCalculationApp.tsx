@@ -23,6 +23,8 @@ export const InvoiceCalculationApp = () => {
           label="Coloque sua fatura copiada de um csv"
           id="invoice"
           icon={'mdi:invoice-check-outline'}
+          placeholder="Data da Transacao;Estabelecimento;Tipo da Transacao;Valor
+          08/07/2023;Uber   *uber   *trip;Compra � vista;+8,66"
           onChange={(ev) => {
             handlerTextArea(ev)
           }}

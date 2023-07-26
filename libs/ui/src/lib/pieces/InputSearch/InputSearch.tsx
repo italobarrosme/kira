@@ -18,14 +18,14 @@ export const InputSearch = ({
 }: InputSearchProps) => {
   return (
     <>
-      <label htmlFor={id} className=" text-secondary-500 my-2">
+      <label htmlFor={id} className=" text-brand-light my-2">
         {label}
       </label>
-      <div className="flex items-center bg-secondary-500 rounded-md px-2 h-8 w-full max-w-xl text-secondary-100">
+      <div className="flex items-center bg-brand-light rounded-md px-2 h-8 w-full max-w-xl text-brand-dark">
         <Icon icon={icon} />
         <input
           onChange={(ev) => onChange(ev)}
-          className="rounded-md focus:outline-none px-2 w-full "
+          className="rounded-md focus:outline-none px-2 w-full bg-brand-light font-bold"
           type="text"
           id={id}
           placeholder={placeholder}
