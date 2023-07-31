@@ -1,19 +1,51 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button, InputText } from '@kira/ui'
 import { CardChat } from '../components/CardChat'
-import { useState } from 'react'
-import { getResponseChat } from '../services/'
+import { useEffect, useState } from 'react'
+import {
+  getResponseChat,
+  getResponseButtonState,
+  postResponseButtonState
+} from '../services/'
 
 export const Checkpoint = () => {
   const [input, setInput] = useState('')
 
-  const [messages, setMessages] = useState<any>()
+  const [messages, setMessages] = useState<any>([])
   const [isLoading, setIsLoading] = useState(false)
+
+  const [clickBlock, setClickBlock] = useState<any>({
+    isBlocked: false,
+    clickCount: 0
+  })
+
+  useEffect(() => {
+    const fetchButtonState = async () => {
+      try {
+        const { clickCount, blocked } = await getResponseButtonState('a')
+
+        setClickBlock({ clickCount, isBlocked: blocked })
+      } catch (error) {
+        console.log('error', error)
+      }
+    }
+
+    fetchButtonState()
+  }, [])
 
   const handleInputChange = (e: { target: { value: string } }) => {
     setInput(e.target.value)
   }
 
   const handleSubmit = async () => {
+    try {
+      const { clickCount, blocked } = await postResponseButtonState('a')
+
+      setClickBlock({ clickCount, isBlocked: blocked })
+    } catch (error) {
+      console.log('error', error)
+    }
+
     setIsLoading(true)
     try {
       const { choices } = await getResponseChat(input)
@@ -31,13 +63,12 @@ export const Checkpoint = () => {
     } catch (error) {
       console.log('error', error)
     } finally {
-      // Definir isLoading como false após a resposta ser recebida (com sucesso ou erro)
       setIsLoading(false)
     }
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen p-4  h-">
+    <div className="flex flex-col items-center justify-center h-screen p-4 w-full">
       <CardChat subject="Chatbot" messages={messages}>
         <div className="flex justify-between gap-2 w-full h-9 items-center">
           <InputText
@@ -49,8 +80,11 @@ export const Checkpoint = () => {
           <Button
             label="Send"
             className="w-36"
-            onClick={handleSubmit}
+            onClick={() => {
+              handleSubmit()
+            }}
             isLoading={isLoading}
+            disabled={clickBlock.isBlocked}
           />
         </div>
       </CardChat>

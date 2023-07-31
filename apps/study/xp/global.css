@@ -28,7 +28,7 @@ input[type='file'] {
 
 /* Estilo para a scrollbar */
 ::-webkit-scrollbar {
-  width: 10px; /* Largura da scrollbar */
+  width: 5px; /* Largura da scrollbar */
 }
 
 /* Estilo para o thumb (alça) da scrollbar */

@@ -22,3 +22,29 @@ export const getResponseChat = async (content: string) => {
     error
   }
 }
+
+export const getResponseButtonState = async (userId: string) => {
+  const response = await fetch(
+    `api/chatbot/button-state?userId=${userId}`
+  ).then((res) => res.json())
+
+  const { clickCount, blocked } = response
+
+  return {
+    clickCount,
+    blocked
+  }
+}
+
+export const postResponseButtonState = async (userId: string) => {
+  const response = await fetch(`api/chatbot/button-state?userId=${userId}`, {
+    method: 'POST'
+  }).then((res) => res.json())
+
+  const { clickCount, blocked } = response
+
+  return {
+    clickCount,
+    blocked
+  }
+}
