@@ -62,6 +62,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
             rel="stylesheet"
           />
+          <script
+            src="https://cdn.jsdelivr.net/npm/three-x3@0.0.10/dist/x3-standalone.js"
+            integrity="sha256-oKQUM+QPtvuvLmxpqxdxbrJAq21SZ+7hYK8WlGztXNE="
+            defer
+            crossOrigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />

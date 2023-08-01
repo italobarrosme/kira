@@ -41,6 +41,11 @@ export function Index() {
       id: 8,
       title: 'Chatbot',
       link: '/008-chatbotAI'
+    },
+    {
+      id: 9,
+      title: 'System Solar',
+      link: '/009-system-solar-threejs'
     }
   ]
 
