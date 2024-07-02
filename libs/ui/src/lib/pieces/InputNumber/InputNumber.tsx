@@ -1,3 +1,4 @@
+'use client'
 import { InputHTMLAttributes, ChangeEvent } from 'react'
 import { Icon } from '@iconify/react'
 import { cn } from '@kira/utils'

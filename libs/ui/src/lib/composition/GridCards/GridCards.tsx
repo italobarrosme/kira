@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+'use client'
+
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
@@ -65,7 +65,7 @@ export const GridCards = ({ cards }: GridCardsProps) => {
         <motion.a
           key={card.id}
           href={card.link}
-          className="bg-brand-light backdrop-filter backdrop-brightness-110 rounded-full h-1 w-1 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
+          className="bg-neutral-light backdrop-filter backdrop-brightness-110 rounded-full h-1 w-1 p-2 cursor-pointer group/card flex justify-center items-center grid-card relative"
           animate={positions[card.id]}
           transition={{ duration: 2 }}
         >

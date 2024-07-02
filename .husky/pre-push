@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-git diff HEAD --quiet
-npx nx run-many --targets=test,build --all
-npx --no-install lint-staged --concurrent false --relative

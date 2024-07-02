@@ -1,0 +1,1 @@
+export { Qrcode } from './Qrcode'

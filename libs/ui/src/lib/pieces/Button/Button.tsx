@@ -1,3 +1,4 @@
+'use client'
 import { Icon } from '@iconify/react'
 import { cn } from '@kira/utils'
 import { ButtonHTMLAttributes } from 'react'

@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: Nunito, sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --font-poppins: 'Poppins', sans-serif;
+
+    --color-primary-regular: #fda000;
+    --color-primary-light: #f2a516;
+    --color-primary-dark: #d95204;
+
+    --color-secondary-regular: #121e1e;
+    --color-secondary-light: #1d2b2b;
+    --color-secondary-dark: #0c1616;
+
+    --color-neutral-black: #000000;
+    --color-neutral-white: #f9f9f9;
+    --color-neutral-light: #c4c4c4;
+    --color-neutral-lightest: #0000000a;
+    --color-neutral-dark: #121e1e;
+
+    --color-feedback-error: #f44336;
+    --color-feedback-warning: #ff9800;
+    --color-feedback-success: #4caf;
+    --color-feedback-info: #2196f3;
+
+    --color-complementary-highlight: #fd6600;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+/* Estilo para a scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Largura da scrollbar */
+}
+
+/* Estilo para o thumb (alça) da scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #f29f05; /* Cor do thumb */
+  border-radius: 5px; /* Raio de borda do thumb */
+}
+
+/* Estilo para a track (trilha) da scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Cor da track */
+}
+
+/* Estilo para o canto da scrollbar */
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Cor do canto */
+}

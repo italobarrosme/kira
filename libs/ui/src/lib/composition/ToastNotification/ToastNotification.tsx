@@ -1,3 +1,4 @@
+'use client'
 import { cn } from '@kira/utils'
 import { useToastNotification } from './hook'
 import { Icon } from '@iconify/react'
