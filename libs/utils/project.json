@@ -16,15 +16,11 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/utils/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/utils"],
+      "outputs": ["{workspaceRoot}/coverage/libs/utils"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/libs/utils"
