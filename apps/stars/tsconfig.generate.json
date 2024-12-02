@@ -8,6 +8,6 @@
     "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names
     "outDir": "./dist"
   },
-  "include": ["generatePages.ts"],
+  "include": ["generate.ts"],
   "exclude": ["node_modules"]
 }

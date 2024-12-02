@@ -33,5 +33,10 @@ export const projectsList = [
     id: 7,
     title: 'System Solar',
     link: '/007-systemsolarthreejs'
+  },
+  {
+    id: 8,
+    title: 'Multi Step Form',
+    link: '/008-multistepform'
   }
 ]

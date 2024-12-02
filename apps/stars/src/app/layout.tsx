@@ -1,4 +1,3 @@
-import { cn } from '@kira/utils'
 import './../global.css'
 import { ButtonLink } from '../modules/Commons'
 
